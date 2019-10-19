@@ -93,9 +93,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="NewBehaviourScript.cs" t="Include" />
           <e p="PlaySoundOnCollision.cs" t="Include" />
           <e p="Scaler.cs" t="Include" />
           <e p="ToggleLights.cs" t="Include" />
+          <e p="VelocityAudio.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="Editor" t="Include">

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ToggleLights : MonoBehaviour
 {
-    public static bool toggle = false;
+    private bool toggled = false;
+    public GameObject light;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,9 @@ public class ToggleLights : MonoBehaviour
         
     }
 
-    public static void DoSomething() {
+    public void ChangeLights() {
         Debug.Log("triggered!");
-        var light = GameObject.Find("deskLight");
+        
         if (light.activeSelf)
         {
             light.SetActive(false);
