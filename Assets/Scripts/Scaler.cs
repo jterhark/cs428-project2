@@ -6,7 +6,8 @@ public class Scaler : MonoBehaviour
 {
 
     private int level = 2;
-    
+    public Vector3 ScaleLevelOne, ScaleLevelTwo, ScaleLevelThree;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +31,26 @@ public class Scaler : MonoBehaviour
 
         level--;
 
-        var localScale = transform.localScale;
-        var newX = localScale.x / 30.0f;
-        var newY = localScale.y / 30.0f;
-        var newZ = localScale.z / 30.0f;
-        transform.localScale = new Vector3(0.2f,0.2f,0.2f);
-        
+        Scale();
+
     }
-    
+
+    void Scale()
+    {
+        switch (level)
+        {
+            case 1:
+                transform.localScale = ScaleLevelOne;
+                break;
+            case 2:
+                transform.localScale = ScaleLevelTwo;
+                break;
+            case 3:
+                transform.localScale = ScaleLevelThree;
+                break;
+        }
+    }
+
     public void ScaleUp()
     {
         Debug.Log("SCALER: Something Happened!");
@@ -48,12 +61,9 @@ public class Scaler : MonoBehaviour
         }
 
         level++;
+        
+        Scale();
 
-        var localScale = transform.localScale;
-        var newX = localScale.x * 30.0f;
-        var newY = localScale.y * 30.0f;
-        var newZ = localScale.z * 30.0f;
-        transform.localScale += new Vector3(-newX,-newY,-newZ);
         
     }
 }
