@@ -310,7 +310,6 @@
           <e p="Dependencies" t="Include">
             <e p="Zinnia.Unity" t="Include">
               <e p="Dependencies" t="Include">
-                <e p="FodyWeavers.xml" t="Include" />
                 <e p="Supyrb" t="Include">
                   <e p="Editor" t="Include">
                     <e p="SerializedPropertyExtensions.cs" t="Include" />
